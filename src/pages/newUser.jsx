@@ -32,6 +32,8 @@ export default function NewUser() {
   const validateEmail = dateUser.emailNewUser.includes("@") && dateUser.emailNewUser.includes('.com');
   const validate = validateName && validateEmail && validateCpf && validateWahts && validatePassword && validateCd
 
+  console.log(validate);
+
   return (
     <div>
       <h1>New User</h1>
