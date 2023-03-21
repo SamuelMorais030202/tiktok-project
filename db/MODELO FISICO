@@ -1,0 +1,21 @@
+/* MODELO LÓGICO: */
+CREATE DATABASE tiktok;
+use tiktok;
+CREATE TABLE usuario (
+    idUsuario INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255),
+    email VARCHAR(256),
+    whatsApp VARCHAR(11),
+    cpf VARCHAR(11)
+);
+
+CREATE TABLE pontos (
+    ponto INTEGER,
+    dataHora datetime,
+    fkUsuario INTEGER
+);
+ 
+ALTER TABLE pontos ADD CONSTRAINT FK_pontos_1
+    FOREIGN KEY (fkUsuario)
+    REFERENCES usuario (idUsuario)
+    ON DELETE CASCADE;
