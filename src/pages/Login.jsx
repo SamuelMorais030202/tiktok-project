@@ -1,6 +1,9 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 export default function Login (){
+  const history = useHistory();
+
   return (
     <div>
       <h1>Bem vindo!</h1>
@@ -15,7 +18,7 @@ export default function Login (){
         <button>Entrar</button>
       </div>
       <div>
-        <h3>Novo usuário? clique aqui.</h3>
+        <button onClick={ () => history.push('/new-user')}>Novo usuário? clique aqui.</button>
         <p>Política de Privacidade</p>
         <p>Termos de Uso</p>
       </div>
