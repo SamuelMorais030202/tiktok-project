@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Axios from "axios";
 
 export default function NewUser() {
   const [dateUser, setDateUser] = useState({
@@ -21,7 +22,15 @@ export default function NewUser() {
   };
 
   const handleClick = () => {
-    history.push('/about');
+
+    Axios.post("http://localhost:3001/register", {
+      email: dateUser.emailNewUser,
+      password: dateUser.passwordNewUser,
+    }).then((response) => {
+      alert(response.data.msg);
+      console.log(response);
+    });
+
   }
 
   const validatePassword = dateUser.passwordNewUser.length > 3;
@@ -41,67 +50,67 @@ export default function NewUser() {
         <label htmlFor="name">
           <input
             type="text"
-            value={ dateUser.nameNewUser }
+            value={dateUser.nameNewUser}
             name="nameNewUser"
             id="name"
             placeholder="name"
-            onChange={ (e) => handelChange(e) }
+            onChange={(e) => handelChange(e)}
           />
         </label>
         <label htmlFor="email">
           <input
             type="text"
-            value={ dateUser.emailNewUser }
+            value={dateUser.emailNewUser}
             name="emailNewUser"
             id="email"
             placeholder="email"
-            onChange={ (e) => handelChange(e) }
+            onChange={(e) => handelChange(e)}
           />
         </label>
         <label htmlFor="cpf">
           <input
             type="number"
-            value={ dateUser.cpfNewUser }
+            value={dateUser.cpfNewUser}
             name="cpfNewUser"
             id="cpf"
             placeholder="CPF"
-            onChange={ (e) => handelChange(e) }
+            onChange={(e) => handelChange(e)}
           />
         </label>
         <label htmlFor="watss">
           <input
             type="number"
-            value={ dateUser.WhatsappNewUser }
+            value={dateUser.WhatsappNewUser}
             name="WhatsappNewUser"
             id="watss"
             placeholder="Whatsapp"
-            onChange={ (e) => handelChange(e) }
+            onChange={(e) => handelChange(e)}
           />
         </label>
         <label htmlFor="cd">
           <input
             type="number"
-            value={ dateUser.cdNewUser }
+            value={dateUser.cdNewUser}
             name="cdNewUser"
             id="cd"
             placeholder="Código de compra"
-            onChange={ (e) => handelChange(e) }
+            onChange={(e) => handelChange(e)}
           />
         </label>
         <label htmlFor="password">
           <input
             type="password"
-            value={ dateUser.passwordNewUser }
+            value={dateUser.passwordNewUser}
             name="passwordNewUser"
             id="password"
             placeholder="Senha"
-            onChange={ (e) => handelChange(e) }
+            onChange={(e) => handelChange(e)}
           />
         </label>
         <button
           type="button"
-          disabled={ !validate }
-          onClick={ handleClick }
+          disabled={!validate}
+          onClick={handleClick}
         >
           Cadastrar
         </button>
