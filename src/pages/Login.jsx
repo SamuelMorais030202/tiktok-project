@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import '../styles/Login.css'
+import Axios from "axios";
 import logo from '../images/logo.jpg'
 
 
 export default function Login (){
+  const [userLogin, setUserLogin] = useState({
+    email: '',
+    password: '',
+  });
+
   const history = useHistory();
+
+  const handelChange = ({ target  }) => {
+    setUserLogin({
+      ...userLogin,
+      [target.name]: target.value,
+    });
+  };
+
+  const handleClick = () => {
+    Axios.post("http://localhost:3001/login", {
+      email: userLogin.email,
+      password: userLogin.password,
+    }).then((response) => {
+      alert(response.data.msg);
+      if (response.data.msg === 'Usuário logado') {
+        history.push('/about')
+      }
+    });
+  }
 
   return (
     <>
@@ -16,15 +41,15 @@ export default function Login (){
           <img className="logo" src={ logo } alt="sss" />
         <h1 className="title">Bem vindo!</h1>
           <label htmlFor="email">
-            <input className="input-email" type="text" name="email" id="email" placeholder="E-mail" />
+            <input className="input-email" type="text" name="email" id="email" placeholder="E-mail" onChange={ (e) => handelChange(e) } />
           </label>
           <label htmlFor="password">
-            <input className="input-password" type="text" name="password" id="password" placeholder="Senha" />
+            <input className="input-password" type="password" name="password" id="password" placeholder="Senha" onChange={ (e) => handelChange(e) } />
           </label>
           <div  className="password-msg">
           <p>Esqueci minha senha</p>
           </div>
-          <button className="button-enter">ENTRAR</button>
+          <button className="button-enter" onClick={ () => handleClick() }>ENTRAR</button>
         </div>
         <div className="politcy-button">
           <button className="newUserBtn" onClick={() => history.push('/new-user')}>Novo usuário? clique aqui.</button>

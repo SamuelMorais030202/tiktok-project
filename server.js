@@ -6,7 +6,10 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 const db = mysql.createPool({
-  
+  host: "162.241.2.41",
+  user: "tiflat68_tiktok",
+  password: ",~h(7;^.!I5P",
+  database: "tiflat68_tiktok",
 });
 
 app.use(express.json());
@@ -22,7 +25,7 @@ app.post("/register", (req, res) => {
       res.send(err);
     }
 
-    if (result.length == 0) {
+    if (result.length === 0) {
       bcrypt.hash(password, saltRounds, (err, hash) => {
         db.query(
           "INSERT INTO usuario (email, senha) VALUE (?,?)",

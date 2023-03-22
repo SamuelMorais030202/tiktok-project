@@ -28,7 +28,11 @@ export default function NewUser() {
       password: dateUser.passwordNewUser,
     }).then((response) => {
       alert(response.data.msg);
-      console.log(response);
+      if (response.data.msg === 'Usuário cadastrado com sucesso') {
+        history.push('/about');
+      } else if (response.data.msg === 'Email já cadastrado') {
+        history.push('/');
+      }
     });
 
   }
@@ -39,9 +43,7 @@ export default function NewUser() {
   const validateCd = dateUser.cdNewUser.length === 4;
   const validateCpf = dateUser.cpfNewUser.length === 11;
   const validateEmail = dateUser.emailNewUser.includes("@") && dateUser.emailNewUser.includes('.com');
-  const validate = validateName && validateEmail && validateCpf && validateWahts && validatePassword && validateCd
-
-  console.log(validate);
+  const validate = validateName && validateEmail && validateCpf && validateWahts && validatePassword && validateCd;
 
   return (
     <div>
