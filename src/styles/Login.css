@@ -1,0 +1,107 @@
+.container-main {
+    background-image: url('../images/backgroundImg.jpeg');
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.test {
+    background-color: rgba(16, 65, 172, 0.842);
+    display: block;
+    max-width: 500px;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+.logo {
+  width: 30vh;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.title {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 36px;
+  color: rgb(37, 58, 63);
+}
+
+.inputs-login {
+    background-color: rgb(249, 249, 249);
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 50vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 65vh;
+}
+
+.input-email {
+  width: 40vh;
+  height: 5vh;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border-color: rgb(9,23,71);
+  background: none;
+}
+
+.input-password {
+  width: 40vh;
+  height: 5vh;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border-color: rgb(9,23,71);
+  background: none;
+}
+
+.password-msg {
+    display: flex;
+    width: 37vh;
+    align-items: end;
+    flex-direction: column;
+    min-height: 3vh;
+    color: rgb(17, 19, 139);
+}
+
+.button-enter {
+    width: 40vh;
+    height: 5vh;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(251, 43, 91);
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.politcy-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newUserBtn {
+  background: none;
+  border: none;
+  left: 26px;
+  width: 312px;
+  height: 45px;
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+
+.politcy-privacity {
+  margin-bottom: 0px;
+  color: rgba(255, 255, 255, 0.692);
+}

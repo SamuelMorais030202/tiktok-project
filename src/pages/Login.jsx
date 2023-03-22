@@ -1,27 +1,41 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import '../styles/Login.css'
+import logo from '../images/logo.jpg'
+
 
 export default function Login (){
   const history = useHistory();
 
   return (
-    <div>
-      <h1>Bem vindo!</h1>
-      <div>
-        <label htmlFor="email">
-          <input type="text" name="email" id="email" placeholder="E-mail" />
-        </label>
-        <label htmlFor="password">
-          <input type="text" name="password"id="password" placeholder="Senha" />
-        </label>
-        <p>Esqueci minha senha</p>
-        <button>Entrar</button>
+    <>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" /><div className="container-main">
+      <div className="test">
+        <div className="inputs-login">
+          <img className="logo" src={ logo } alt="sss" />
+        <h1 className="title">Bem vindo!</h1>
+          <label htmlFor="email">
+            <input className="input-email" type="text" name="email" id="email" placeholder="E-mail" />
+          </label>
+          <label htmlFor="password">
+            <input className="input-password" type="text" name="password" id="password" placeholder="Senha" />
+          </label>
+          <div  className="password-msg">
+          <p>Esqueci minha senha</p>
+          </div>
+          <button className="button-enter">ENTRAR</button>
+        </div>
+        <div className="politcy-button">
+          <button className="newUserBtn" onClick={() => history.push('/new-user')}>Novo usuário? clique aqui.</button>
+          <Link to="/privacy-policy">
+            <p className="politcy-privacity">Política de Privacidade</p>
+          </Link>
+          <Link to="/terms">
+            <p className="politcy-privacity">Termos de Uso</p>
+          </Link>
+        </div>
       </div>
-      <div>
-        <button onClick={ () => history.push('/new-user')}>Novo usuário? clique aqui.</button>
-        <p>Política de Privacidade</p>
-        <p>Termos de Uso</p>
-      </div>
-    </div>
+    </div></>
   );
 }
