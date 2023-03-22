@@ -73,6 +73,30 @@ app.post("/login", (req, res) => {
   });
 });
 
+app.get("/ponto", (req, res) => {
+  const idUsuario = req.body.idUsuario;
+
+  db.query("SELECT * FROM ponto WHERE fkUsuario = ?", [idUsuario], (err, result) => {
+    if (result.length > 0 && result.length < 3) {
+      res.send("pode fazer incremento!");
+    } else {
+      res.send("0 pontos");
+    }
+  });
+});
+
+
+app.post("/ponto", (req, res) => {
+  const idUsuario = req.body.idUsuario;
+  db.query("SELECT count(*) FROM ponto WHERE fkUsuario = ? AND dataHora BETWEEN CONCAT(curdate(),' 00:00:00') AND CONCAT(curdate(),' 23:59:59')", [idUsuario], (err, result) => {
+    if (result < 1) {
+      res.send("0 pontos");
+    } else {
+      res.send(result);
+    }
+  });
+});
+
 app.listen(3001, () => {
   console.log("rodando na porta 3001");
 });
