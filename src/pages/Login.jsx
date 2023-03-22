@@ -26,7 +26,7 @@ export default function Login (){
       password: userLogin.password,
     }).then((response) => {
       alert(response.data.msg);
-      console.log(response)
+      console.log(response);
       if (response.data.msg === 'Usuário logado') {
         history.push('/about')
       }

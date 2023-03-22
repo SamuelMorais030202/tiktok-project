@@ -62,7 +62,7 @@ app.post("/login", (req, res) => {
           res.send(error);
         }
         if (response) {
-          res.send({ msg: "Usuário logado" });
+          res.send({ msg: "Usuário logado", name: result[0].nome, id: result[0].idUsuario });
         } else {
           res.send({ msg: "Usuário ou senha incorreta!" });
         }
