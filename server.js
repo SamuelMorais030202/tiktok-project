@@ -73,7 +73,7 @@ app.post("/login", (req, res) => {
   });
 });
 
-app.get("/ponto", (req, res) => {
+app.post("/pontos", (req, res) => {
   const idUsuario = req.body.idUsuario;
 
   db.query("SELECT * FROM ponto WHERE fkUsuario = ?", [idUsuario], (err, result) => {
