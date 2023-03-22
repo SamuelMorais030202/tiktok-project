@@ -54,18 +54,21 @@ app.post("/login", (req, res) => {
       res.send(err);
     }
     if (result.length > 0) {
-      bcrypt.compare(password, result[0].password, (error, response) => {
+      console.log('Usuário encontrado')
+      console.log(result);
+      // res.send(result);
+      bcrypt.compare(password, result[0].senha, (error, response) => {
         if (error) {
           res.send(error);
         }
         if (response) {
           res.send({ msg: "Usuário logado" });
         } else {
-          res.send({ msg: "Senha incorreta" });
+          res.send({ msg: "Usuário ou senha incorreta!" });
         }
       });
     } else {
-      res.send({ msg: "Usuário não registrado!" });
+      res.send({ msg: "Usuário ou senha incorreta!" });
     }
   });
 });

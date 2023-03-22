@@ -26,6 +26,7 @@ export default function Login (){
       password: userLogin.password,
     }).then((response) => {
       alert(response.data.msg);
+      console.log(response)
       if (response.data.msg === 'Usuário logado') {
         history.push('/about')
       }
@@ -44,7 +45,7 @@ export default function Login (){
             <input className="input-email" type="text" name="email" id="email" placeholder="E-mail" onChange={ (e) => handelChange(e) } />
           </label>
           <label htmlFor="password">
-            <input className="input-password" type="password" name="password" id="password" placeholder="Senha" onChange={ (e) => handelChange(e) } />
+            <input className="input-password" type="text" name="password" id="password" placeholder="Senha" onChange={ (e) => handelChange(e) } />
           </label>
           <div  className="password-msg">
           <p>Esqueci minha senha</p>
