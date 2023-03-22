@@ -6,6 +6,7 @@ import MainPage from "./pages/MainPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import NewUser from "./pages/newUser";
+import WatchVideos from "./pages/WatchVideos";
 
 export default function App () {
   return (
@@ -16,6 +17,7 @@ export default function App () {
         <Route path="/privacy-policy" component={ PrivacyPolicy } />
         <Route path="/terms" component={ TermsOfUse } />
         <Route path="/new-user" component={ NewUser } />
+        <Route path="/watchVieos" component={ WatchVideos } />
       </Switch>
     </div>
   );

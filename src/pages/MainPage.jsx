@@ -5,12 +5,12 @@ export default function MainPage() {
     <div>
       <header>
         <h5>Olá Maria Clara</h5>
-        <p>pts</p>
+        <p>1.715</p>
       </header>
       <div>
         <img src="" alt="" />
         <div>
-          <p>pts</p>
+          <p>1.715</p>
           <p>Meta de trocar</p>
           <div>
             <div></div>
