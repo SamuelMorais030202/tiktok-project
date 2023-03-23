@@ -25,6 +25,7 @@ export default function Login (){
   };
 
   const handleClick = () => {
+    localStorage.removeItem('app');
     Axios.post("http://localhost:3001/login", {
       email: userLogin.email,
       password: userLogin.password,

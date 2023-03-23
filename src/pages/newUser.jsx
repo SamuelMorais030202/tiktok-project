@@ -30,7 +30,7 @@ export default function NewUser() {
     }).then((response) => {
       alert(response.data.msg);
       if (response.data.msg === 'Usuário cadastrado com sucesso') {
-        history.push('/about');
+        history.push('/');
       } else if (response.data.msg === 'Email já cadastrado') {
         history.push('/');
       }
