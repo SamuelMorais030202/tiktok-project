@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Axios from "axios";
+import '../styles/NewUser.css'
 
 export default function NewUser() {
   const [dateUser, setDateUser] = useState({
@@ -46,11 +47,16 @@ export default function NewUser() {
   const validate = validateName && validateEmail && validateCpf && validateWahts && validatePassword && validateCd;
 
   return (
-    <div>
-      <h1>New User</h1>
-      <div>
+    <div className="div-pai">
+      <div className="div-filho">
+      <div className="inputs">
+      <h1 className="title-h1">Preencha os campos abaixo para efetuar seu cadastro:</h1>
+        <div className="p-msg">
+        <p className="msg-title">Obs: verifique se todos os campos estão corretos!</p>
+        </div>
         <label htmlFor="name">
           <input
+            className="input-registray-name"
             type="text"
             value={dateUser.nameNewUser}
             name="nameNewUser"
@@ -61,6 +67,7 @@ export default function NewUser() {
         </label>
         <label htmlFor="email">
           <input
+            className="input-registray-email"
             type="text"
             value={dateUser.emailNewUser}
             name="emailNewUser"
@@ -71,6 +78,7 @@ export default function NewUser() {
         </label>
         <label htmlFor="cpf">
           <input
+            className="input-registray-cpf"
             type="number"
             value={dateUser.cpfNewUser}
             name="cpfNewUser"
@@ -81,6 +89,7 @@ export default function NewUser() {
         </label>
         <label htmlFor="watss">
           <input
+            className="input-whats"
             type="number"
             value={dateUser.WhatsappNewUser}
             name="WhatsappNewUser"
@@ -91,6 +100,7 @@ export default function NewUser() {
         </label>
         <label htmlFor="cd">
           <input
+            className="codigo-valid"
             type="number"
             value={dateUser.cdNewUser}
             name="cdNewUser"
@@ -101,6 +111,7 @@ export default function NewUser() {
         </label>
         <label htmlFor="password">
           <input
+            className="senha"
             type="password"
             value={dateUser.passwordNewUser}
             name="passwordNewUser"
@@ -109,13 +120,22 @@ export default function NewUser() {
             onChange={(e) => handelChange(e)}
           />
         </label>
+        <label className="input-terms">
+          <input type="checkbox" name="concorda" id="id-terms" />
+          Eu li e concordo com as Políticas de Privacidade e os Termos de Uso.
+        </label>
+        <div className="text-container">
+        <p className="alert-text">O botão de cadastro só ficará disponível após inserir o código de compra correto!</p>
+        </div>
         <button
+          className="button-cadastrar"
           type="button"
           disabled={!validate}
           onClick={handleClick}
         >
-          Cadastrar
+          CADASTRAR
         </button>
+      </div>
       </div>
     </div>
   )

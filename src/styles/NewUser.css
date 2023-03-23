@@ -1,0 +1,324 @@
+.div-pai {
+    background-image: url('../images/backgroundImg.jpeg');
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.div-filho {
+    background-color: rgba(16, 65, 172, 0.842);
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    max-width: 400px;
+    height: 100vh;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+.inputs {
+    background-color: rgb(249, 249, 249);
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 65vh;
+}
+
+.input-name {
+    width: 40vh;
+    height: 6vh;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rg(var(217, 219, 226),0.15)b;
+    background: none;
+}
+
+.p-msg {
+    color: red;
+    display: flex;
+    width: 45vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.msg-title {
+    font-size: 12px;
+    align-items: center;
+}
+
+    .inputs {
+        background-color: rgb(249, 249, 249);
+        margin-top: 10px;
+        border-radius: 15px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 97vh;
+        box-shadow: 5px 5px 5px rgb(82, 111, 175);
+    }
+
+    .msg-title {
+        color: rgb(255, 0, 0);
+        width: 9000px;
+        font-size: 9z0px;
+        align-items: center;
+    }
+
+    .input-registray-name {
+        width: 50vh;
+        height: 6vh;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(145, 145, 145);
+        background: none;
+    }
+
+    .input-registray-email {
+        width: 50vh;
+        height: 6vh;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(145, 145, 145);
+        background: none;
+    }
+
+    .input-registray-cpf {
+        width: 50vh;
+        height: 6vh;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(145, 145, 145);
+        background: none;
+    }
+
+    .input-whats {
+        width: 50vh;
+        height: 6vh;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(145, 145, 145);
+        background: none;
+    }
+
+    .codigo-valid {
+        width: 50vh;
+        height: 6vh;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(145, 145, 145);
+        background: none;
+    }
+
+    .senha {
+        width: 50vh;
+        height: 6vh;
+        border-radius: 6px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(145, 145, 145);
+        background: none;
+    }
+
+    .title-h1 {
+      border-top: 20px;
+    }
+
+    .input-terms {
+        width: 50vh;
+        height: 6vh;
+        margin-top: 6px;
+        font-size: 14px;
+    }
+
+    .text-container {
+        margin-top: 30px;
+        color: red;
+        width: 40vh;
+    }
+
+    .alert-text {
+      font-size: 11px;
+      text-align: center;
+      
+    }
+
+    .button-cadastrar {
+        width: 50vh;
+        height: 6vh;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        border: none;
+        background: rgb(251, 43, 91);
+        color: white;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 599px) {
+
+        .div-pai {
+            background-color: rgb(16, 65, 172);
+            color: rgb(0, 0, 0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .inputs {
+            background-color: rgb(249, 249, 249);
+            margin-top: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 51vh;
+            min-height: 90vh;
+        }
+
+        .div-filho {
+            background-color: rgba(16, 65, 172, 0.842);
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+            max-width: 400px;
+            height: 100vh;
+            padding: 10px 40px;
+            border-radius: 10px;
+        }
+
+        .title-h1 {
+            border-top: 20px;
+            font-size: 21px;
+            margin-bottom: 15px;
+          }
+
+          .msg-title {
+            color: rgb(255, 0, 0);
+            width: 9000px;
+            font-size:11px;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .input-registray-name{
+            width: 45vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+        }
+
+        .input-registray-email {
+            width: 45vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+        }
+    
+        .input-registray-cpf {
+            width: 45vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+        }
+    
+        .input-whats {
+            width: 45vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+        }
+
+        .codigo-valid {
+            width: 45vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+        }
+    
+        .senha {
+            width: 45vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+        }
+
+        .input-terms {
+            width: 48vh;
+            height: 4vh;
+            margin-top: 6px;
+            font-size: 12px;
+        }
+
+        .alert-text {
+            font-size: 11px;
+            text-align: center;
+            font-size:11px;
+            align-items: center;
+            margin-bottom: 4px;
+          }
+
+          .button-cadastrar {
+            width: 45vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border: none;
+            background: rgb(251, 43, 91);
+            color: white;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+    }
