@@ -86,7 +86,7 @@ app.post("/updates", (req, res) => {
 app.post("/pontos", (req, res) => {
   const idUsuario = req.body.idUsuario;
 
-  db.query("SELECT * FROM ponto WHERE fkUsuario = ?", [idUsuario], (err, result) => {
+  db.query("SELECT count(*) FROM ponto WHERE fkUsuario = ?", [idUsuario], (err, result) => {
     if (result < 1) {
       res.send("0 pontos");
     } else {
@@ -100,15 +100,14 @@ app.post("/ponto", (req, res) => {
   const idUsuario = req.body.idUsuario;
   db.query("SELECT count(*) FROM ponto WHERE fkUsuario = ? AND dataHora BETWEEN CONCAT(curdate(),' 00:00:00') AND CONCAT(curdate(),' 23:59:59')", [idUsuario], (err, result) => {
     if (result.length >= 0 && result.length < 3) {
+          db.query("INSERT INTO ponto (fkUsuario) VALUE (?)",[idUsuario],(error, response) => {
+            if (err) {
+              res.send(err);
+            }
 
-      db.query("INSERT INTO ponto (fkUsuario) VALUE (?)",[idUsuario],(error, response) => {
-          if (err) {
-            res.send(err);
+            res.send({ msg: "Ponto incrementado" });
           }
-
-          res.send({ msg: "pode Mostrar o vídeo" });
-        }
-      );
+        );
     } else {
       res.send("0 pontos")
     }
