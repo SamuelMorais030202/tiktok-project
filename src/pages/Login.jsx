@@ -30,10 +30,17 @@ export default function Login (){
       password: userLogin.password,
     }).then((response) => {
       alert(response.data.msg);
-      console.log(response);
+      // console.log(response);
       setData(response.data.id);
       if (response.data.msg === 'Usuário logado') {
-        history.push('/about')
+        history.push("/about")
+      }
+      const valorAtual = localStorage.getItem('app');
+
+      // Verifica se o valor obtido é nulo ou indefinido
+      if (valorAtual === null || valorAtual === undefined) {
+        // Adiciona o novo item ao localStorage
+        localStorage.setItem('app', JSON.stringify(response.data.id));
       }
     });
   }

@@ -54,8 +54,6 @@ app.post("/login", (req, res) => {
       res.send(err);
     }
     if (result.length > 0) {
-      console.log('Usuário encontrado')
-      console.log(result);
       // res.send(result);
       bcrypt.compare(password, result[0].senha, (error, response) => {
         if (error) {
@@ -69,6 +67,18 @@ app.post("/login", (req, res) => {
       });
     } else {
       res.send({ msg: "Usuário ou senha incorreta!" });
+    }
+  });
+});
+
+app.post("/updates", (req, res) => {
+  const idUsuario = req.body.idUsuario;
+
+  db.query("SELECT * FROM usuario WHERE idUsuario = ?", [idUsuario], (err, result) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
     }
   });
 });
