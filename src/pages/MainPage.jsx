@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import UserDataContext from "../context/UserDataContext";
 
 export default function MainPage() {
+  const context = useContext(UserDataContext);
+
   return (
     <div>
       <header>
-        <h5>Olá Maria Clara</h5>
+        <h5>Olá { context.userData.id }</h5>
         <p>1.715</p>
       </header>
       <div>
