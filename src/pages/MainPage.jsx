@@ -6,6 +6,7 @@ export default function MainPage() {
   const context = useContext(UserDataContext);
   console.log(context);
   const [date, setDate] = useState({});
+  const [pts, setPts] = useState(0)
 
   const test = localStorage.getItem('app');
 
@@ -13,16 +14,35 @@ export default function MainPage() {
     Axios.post("http://localhost:3001/updates", {
       idUsuario: test,
     }).then((response) => {
-      console.log(response);
       setDate(response.data[0]);
     });
+    Axios.post("http://localhost:3001/pontos", {
+      idUsuario: test,
+    }).then((response) => {
+      const pstInicial = Object.values(response.data[0]);
+      setPts(pstInicial);
+    });
   }, [test]);
+
+  const handleClick = () => {
+    Axios.post("http://localhost:3001/ponto", {
+      idUsuario: test,
+    }).then((response) => {
+      console.log(response);
+    });
+    Axios.post("http://localhost:3001/pontos", {
+      idUsuario: test,
+    }).then((response) => {
+      const pstInicial = Object.values(response.data[0])
+      setPts(pstInicial);
+    });
+  }
 
   return (
     <div>
       <header>
         <h5>Olá {date.email}</h5>
-        <p>1.715</p>
+        <p>{ pts } pts</p>
       </header>
       <div>
         <img src="" alt="" />
@@ -35,7 +55,7 @@ export default function MainPage() {
         </div>
         <button>Quero trocar meus pontos</button>
         <button>Compartilhar com os amigos</button>
-        <button>Assistir vídeos</button>
+        <button onClick={ () => handleClick() }>Assistir vídeos</button>
       </div>
     </div>
   )
