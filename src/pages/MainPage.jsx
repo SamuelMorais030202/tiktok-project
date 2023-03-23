@@ -22,7 +22,7 @@ export default function MainPage() {
       const pstInicial = Object.values(response.data[0]);
       setPts(pstInicial);
     });
-  }, [test]);
+  }, [test, pts]);
 
   const handleClick = () => {
     Axios.post("http://localhost:3001/ponto", {
