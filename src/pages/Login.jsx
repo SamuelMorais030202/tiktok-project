@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import UserDataContext from "../context/UserDataContext";
 import '../styles/Login.css'
 import Axios from "axios";
 import logo from '../images/logo.jpg'
@@ -10,6 +11,9 @@ export default function Login (){
     email: '',
     password: '',
   });
+
+  const context = useContext(UserDataContext);
+  const { setData } = context;
 
   const history = useHistory();
 
@@ -27,6 +31,7 @@ export default function Login (){
     }).then((response) => {
       alert(response.data.msg);
       console.log(response);
+      setData(response.data.id);
       if (response.data.msg === 'Usuário logado') {
         history.push('/about')
       }
