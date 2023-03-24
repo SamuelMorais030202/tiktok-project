@@ -1,0 +1,114 @@
+.container-videos-main {
+    background-color: rgb(16, 65, 172, 0.842);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.conteudo-video {
+    background-color: rgba(248, 248, 248, 0.842);
+    display: flex;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 50vh;
+    flex-direction: column;
+    height: 85vh;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+}
+
+.title-video {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #000000;
+}
+
+.conteudo-text {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 40px;
+  border-radius: 10px;
+  align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 70;
+  color: rgb(46, 44, 46);
+  margin-bottom: 5px;
+}
+
+button {
+    width: 55vh;
+    height: 7vh;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(251, 43, 91);
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.alert-video-text {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    width: 50vh;
+    margin-left: 20px;
+}
+
+.imgNullFund {
+    width: 30vh;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 599px) {
+  .conteudo-video {
+    background-color: rgba(248, 248, 248, 0.842);
+    display: flex;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 40vh;
+    flex-direction: column;
+    height: 88vh;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+  }
+
+  .text-cell {
+    width: 48vh;
+    margin-left: 17px;
+  }
+
+  button {
+    width: 45vh;
+    height: 7vh;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(251, 43, 91);
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+  
+}
