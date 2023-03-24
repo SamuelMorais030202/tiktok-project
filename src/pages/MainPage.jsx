@@ -6,7 +6,8 @@ export default function MainPage() {
   const context = useContext(UserDataContext);
   console.log(context);
   const [date, setDate] = useState({});
-  const [pts, setPts] = useState(0)
+  const [pts, setPts] = useState(0);
+  const [verification, setVerification] = useState(false);
 
   const test = localStorage.getItem('app');
 
@@ -28,8 +29,9 @@ export default function MainPage() {
     Axios.post("http://localhost:3001/ponto", {
       idUsuario: test,
     }).then((response) => {
-      alert(response);
-      console.log(response);
+      if (response.data.msg === 'Total') {
+        setVerification(true);
+      }
     });
     Axios.post("http://localhost:3001/pontos", {
       idUsuario: test,
@@ -42,7 +44,7 @@ export default function MainPage() {
   return (
     <div>
       <header>
-        <h5>Olá {date.email}</h5>
+        <h5>Olá {date.nome}</h5>
         <p>{ pts } pts</p>
       </header>
       <div>
@@ -57,6 +59,7 @@ export default function MainPage() {
         <button>Quero trocar meus pontos</button>
         <button>Compartilhar com os amigos</button>
         <button onClick={ () => handleClick() }>Assistir vídeos</button>
+        { verification ? 'Você só pode clicar novamente amanham' : null }
       </div>
     </div>
   )

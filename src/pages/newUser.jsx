@@ -27,6 +27,10 @@ export default function NewUser() {
     Axios.post("http://localhost:3001/register", {
       email: dateUser.emailNewUser,
       password: dateUser.passwordNewUser,
+      cpf: dateUser.cpfNewUser,
+      app: dateUser.WhatsappNewUser,
+      cd: dateUser.cdNewUser,
+      name: dateUser.nameNewUser,
     }).then((response) => {
       alert(response.data.msg);
       if (response.data.msg === 'Usuário cadastrado com sucesso') {

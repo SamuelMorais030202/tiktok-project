@@ -19,6 +19,9 @@ app.use(cors());
 app.post("/register", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
+  const nome = req.body.name;
+  const whatsApp = req.body.app;
+  const cpf = req.body.cpf;
 
   db.query("SELECT * FROM usuario WHERE email = ?", [email], (err, result) => {
     if (err) {
@@ -28,8 +31,8 @@ app.post("/register", (req, res) => {
     if (result.length === 0) {
       bcrypt.hash(password, saltRounds, (err, hash) => {
         db.query(
-          "INSERT INTO usuario (email, senha) VALUE (?,?)",
-          [email, hash],
+          "INSERT INTO usuario (nome, email, senha, whatsApp, cpf) VALUE (?,?,?,?,?)",
+          [nome, email, hash, whatsApp, cpf],
           (error, response) => {
             if (err) {
               res.send(err);
@@ -106,6 +109,8 @@ app.post("/ponto", (req, res) => {
         res.send({ msg: "Ponto incrementado" });
       }
     );
+    } else {
+      res.send({ msg: "Total" })
     }
   });
 });
