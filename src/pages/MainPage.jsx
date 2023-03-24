@@ -28,6 +28,7 @@ export default function MainPage() {
     Axios.post("http://localhost:3001/ponto", {
       idUsuario: test,
     }).then((response) => {
+      alert(response);
       console.log(response);
     });
     Axios.post("http://localhost:3001/pontos", {

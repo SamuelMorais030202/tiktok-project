@@ -34,7 +34,6 @@ app.post("/register", (req, res) => {
             if (err) {
               res.send(err);
             }
-
             res.send({ msg: "Usuário cadastrado com sucesso" });
           }
         );
@@ -95,21 +94,18 @@ app.post("/pontos", (req, res) => {
   });
 });
 
-
 app.post("/ponto", (req, res) => {
   const idUsuario = req.body.idUsuario;
-  db.query("SELECT count(*) FROM ponto WHERE fkUsuario = ? AND dataHora BETWEEN CONCAT(curdate(),' 00:00:00') AND CONCAT(curdate(),' 23:59:59')", [idUsuario], (err, result) => {
-    if (result.length >= 0 && result.length < 3) {
-          db.query("INSERT INTO ponto (fkUsuario) VALUE (?)",[idUsuario],(error, response) => {
-            if (err) {
-              res.send(err);
-            }
-
-            res.send({ msg: "Ponto incrementado" });
-          }
-        );
-    } else {
-      res.send("0 pontos")
+  db.query("SELECT count(idPonto) FROM ponto WHERE fkUsuario = ? AND dataHora BETWEEN CONCAT(curdate(),' 00:00:00') AND CONCAT(curdate(),' 23:59:59')", [idUsuario], (err, result) => {
+    console.log(result);
+    if (Object.values(result[0]) < 2) {
+      db.query("INSERT INTO ponto (fkUsuario) VALUE (?)",[idUsuario],(error, response) => {
+        if (err) {
+          res.send(err);
+        }
+        res.send({ msg: "Ponto incrementado" });
+      }
+    );
     }
   });
 });
