@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Axios from "axios";
 import UserDataContext from "../context/UserDataContext";
+import { useHistory } from "react-router-dom";
 
 export default function MainPage() {
   const context = useContext(UserDataContext);
@@ -10,6 +11,7 @@ export default function MainPage() {
   const [verification, setVerification] = useState(false);
 
   const test = localStorage.getItem('app');
+  const history = useHistory();
 
   useEffect(()  => {
     Axios.post("http://localhost:3001/updates", {
@@ -31,6 +33,9 @@ export default function MainPage() {
     }).then((response) => {
       if (response.data.msg === 'Total') {
         setVerification(true);
+      }
+      if (response.data.msg === 'Ponto incrementado') {
+        history.push('/watchVieos');
       }
     });
     Axios.post("http://localhost:3001/pontos", {
