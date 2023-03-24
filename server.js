@@ -110,7 +110,7 @@ app.post("/ponto", (req, res) => {
       }
     );
     } else {
-      res.send({ msg: "Total" })
+      res.send({ msg : 'Total' })
     }
   });
 });
