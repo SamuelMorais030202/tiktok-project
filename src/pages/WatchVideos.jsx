@@ -15,7 +15,7 @@ export default function WatchVideos (){
             <h4>Para começar a ganhar clique no botão abaixo para ir ao TikTok e assista seus vídeos.</h4>
           </div>
           <div className="classButton">
-            <button>Abrir Tiktok!</button>
+            <button className="button-video">Abrir Tiktok!</button>
               <div className="alert-video-text">
                 <p className="name-user">È necessário deixar esta aba e navegador abertos!!</p>
               </div>
