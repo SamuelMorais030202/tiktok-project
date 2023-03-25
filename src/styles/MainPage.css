@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+}
+
+.body-main-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(16, 65, 172, 0.842);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-main-page {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
