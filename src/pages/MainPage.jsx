@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Axios from "axios";
 import UserDataContext from "../context/UserDataContext";
 import { useHistory } from "react-router-dom";
+import copy from 'clipboard-copy'; // Importando clipboard-copy
 
 import '../styles/MainPage.css';
 import imageFundNull from '../images/logoSemFundo.png'
@@ -49,6 +50,12 @@ export default function MainPage() {
     });
   }
 
+  const handleCopyClick = () => {
+    copy('https://secure.doppus.com/pay/PZ0008MZ0008GZOHOBB');
+    alert("Link copiado para a área de transferência!");
+  }
+
+
   return (
     <div className="body-main-page">
       <header className="header-main-page">
@@ -76,7 +83,7 @@ export default function MainPage() {
         </div>
         <div className="buttons-main-page">
           <button className="trocar-pontos-main-page">Quero trocar meus pontos</button>
-          <button className="compartilhar-main-page">Compartilhar com os amigos</button>
+          <button className="compartilhar-main-page" onClick={ () =>  handleCopyClick() }>Compartilhar com os amigos</button>
           <button className="assistir-main-page" onClick={ () => handleClick() }>Assistir vídeos</button>
         </div>
       </div>
