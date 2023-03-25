@@ -3,12 +3,13 @@ import Axios from "axios";
 import UserDataContext from "../context/UserDataContext";
 import { useHistory } from "react-router-dom";
 
+import '../styles/MainPage.css';
+
 export default function MainPage() {
   const context = useContext(UserDataContext);
   console.log(context);
   const [date, setDate] = useState({});
   const [pts, setPts] = useState(0);
-  const [verification, setVerification] = useState(false);
 
   const test = localStorage.getItem('app');
   const history = useHistory();
@@ -32,7 +33,8 @@ export default function MainPage() {
       idUsuario: test,
     }).then((response) => {
       if (response.data.msg === 'Total') {
-        setVerification(true);
+        alert("Você atingiu a pontuação máxia do dia");
+        history.push('/watchVieos');
       }
       if (response.data.msg === 'Ponto incrementado') {
         history.push('/watchVieos');
@@ -47,14 +49,14 @@ export default function MainPage() {
   }
 
   return (
-    <div>
-      <header>
-        <h5>Olá {date.nome}</h5>
-        <p>{ pts } pts</p>
+    <div className="body-main-page">
+      <header className="header-main-page">
+        <h4 className="name-main-page">Olá {date.nome}</h4>
+        <p className="pts-main-page">{ pts * 9.5 } pts</p>
       </header>
-      <div>
+      <div className="main-main-page">
         <img src="" alt="" />
-        <div>
+        <div className="container-main-page">
           <p>1.715</p>
           <p>Meta de trocar</p>
           <div>
@@ -64,7 +66,6 @@ export default function MainPage() {
         <button>Quero trocar meus pontos</button>
         <button>Compartilhar com os amigos</button>
         <button onClick={ () => handleClick() }>Assistir vídeos</button>
-        { verification ? 'Você só pode clicar novamente amanham' : null }
       </div>
     </div>
   )
