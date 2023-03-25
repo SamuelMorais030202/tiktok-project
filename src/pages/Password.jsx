@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/Password.css';
 
 export default function Password() {
   const [dateUser, setDateUser] = useState({
@@ -18,8 +19,9 @@ export default function Password() {
   }
 
   return (
-    <div>
-      <div>
+    <div className="body-passord-page">
+      <h1>Preencha os dados para recuperar sua senha!</h1>
+      <div className="main-passord-page">
         <label htmlFor="email">
           <input
             className="input-registray-email"
