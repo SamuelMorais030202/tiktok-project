@@ -6,17 +6,132 @@
   height: 100vh;
   width: 100vw;
   background-color: rgb(16, 65, 172, 0.842);
+  background-image: url('../images/backgroundImg.jpeg');
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .header-main-page {
   display: flex;
-  justify-content: space-evenly;
-  gap: 100px;
+  justify-content: space-between;
+  gap: 110px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
+  margin-top: 20px;
+  width: 350px;
 }
+
+.name-main-page {
+  font-size: 14px;
+  color: white;
+}
+
+.main-main-page {
+  background-color: rgba(255, 255, 255, 0.726);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 460px;
+  padding: 5px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 4px 2px 1px rgba(0, 0, 0, 0.507);
+}
+
+.container-main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description-main-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.pts-user-main-page {
+  background-color: rgb(8, 34, 121);
+  border-radius: 12px;
+  height: 20px;
+}
+
+.bara-main-page {
+  background-color: rgb(162, 162, 238);
+  border-radius: 12px;
+  width: 390px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.buttons-main-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.trocar-pontos-main-page {
+  background-color: black;
+  border-radius: 11px;
+  margin-bottom: -3px;
+  height: 33px;
+}
+
+.compartilhar-main-page {
+  background-color: black;
+  border-radius: 11px;
+  margin-bottom: -4px;
+  height: 33px;
+}
+
+.assistir-main-page {
+  background-image: linear-gradient(to right, black, blue);
+  border-radius: 11px;
+}
+
+/* @media screen and (max-width: 599px) {
+  .header-main-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 110px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 300px;
+  }
+
+  .main-main-page {
+    background-color: rgba(255, 255, 255, 0.726);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 4px 2px 1px rgba(0, 0, 0, 0.507);
+  }
+
+  .pts-user-main-page {
+    background-color: rgb(8, 34, 121);
+    border-radius: 12px;
+    height: 20px;
+  }
+  
+  .bara-main-page {
+    background-color: rgb(162, 162, 238);
+    border-radius: 12px;
+    width: 400px;
+    height: 20px;
+    margin-bottom: 20px;
+  }
+} */

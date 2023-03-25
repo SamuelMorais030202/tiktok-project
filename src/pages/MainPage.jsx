@@ -4,6 +4,7 @@ import UserDataContext from "../context/UserDataContext";
 import { useHistory } from "react-router-dom";
 
 import '../styles/MainPage.css';
+import imageFundNull from '../images/logoSemFundo.png'
 
 export default function MainPage() {
   const context = useContext(UserDataContext);
@@ -51,21 +52,33 @@ export default function MainPage() {
   return (
     <div className="body-main-page">
       <header className="header-main-page">
-        <h4 className="name-main-page">Olá {date.nome}</h4>
-        <p className="pts-main-page">{ pts * 9.5 } pts</p>
+        <h4 className="name-main-page">
+          Olá
+          {' '}
+          {date.nome}
+        </h4>
+        <p className="pts-main-page">
+          { pts * 9.5 }
+          {' '}
+          pts
+        </p>
       </header>
       <div className="main-main-page">
-        <img src="" alt="" />
+        <img src={ imageFundNull } alt="logo" className="imgNullFund" />
         <div className="container-main-page">
-          <p>1.715</p>
-          <p>Meta de trocar</p>
-          <div>
-            <div></div>
+          <div className="description-main-page">
+            <p>{ pts * 9.5 } pts</p>
+            <p className="meta-main-page">Meta de troca</p>
+          </div>
+          <div className="bara-main-page">
+            <div className="pts-user-main-page" style={ { width: `${pts * 9.5}px` } }></div>
           </div>
         </div>
-        <button>Quero trocar meus pontos</button>
-        <button>Compartilhar com os amigos</button>
-        <button onClick={ () => handleClick() }>Assistir vídeos</button>
+        <div className="buttons-main-page">
+          <button className="trocar-pontos-main-page">Quero trocar meus pontos</button>
+          <button className="compartilhar-main-page">Compartilhar com os amigos</button>
+          <button className="assistir-main-page" onClick={ () => handleClick() }>Assistir vídeos</button>
+        </div>
       </div>
     </div>
   )
