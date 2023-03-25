@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import '../styles/WatchVideos.css'
 import imageFundNull from '../images/logoSemFundo.png'
 
@@ -15,7 +14,9 @@ export default function WatchVideos (){
             <h4>Para começar a ganhar clique no botão abaixo para ir ao TikTok e assista seus vídeos.</h4>
           </div>
           <div className="classButton">
+            <a href="https://www.tiktok.com/pt-BR" target="_blank" rel="noreferrer">
             <button className="button-video">Abrir Tiktok!</button>
+            </a>
               <div className="alert-video-text">
                 <p className="name-user">È necessário deixar esta aba e navegador abertos!!</p>
               </div>

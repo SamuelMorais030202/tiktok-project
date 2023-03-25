@@ -127,7 +127,7 @@ app.post("/updates", (req, res) => {
 app.post("/pontos", (req, res) => {
   const idUsuario = req.body.idUsuario;
 
-  db.query("SELECT count(*) FROM ponto WHERE fkUsuario = ?", [idUsuario], (err, result) => {
+  db.query("SELECT sum(ponto) FROM ponto WHERE fkUsuario = ?", [idUsuario], (err, result) => {
     if (result < 1) {
       res.send("0 pontos");
     } else {
