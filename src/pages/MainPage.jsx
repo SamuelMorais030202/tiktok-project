@@ -53,8 +53,12 @@ export default function MainPage() {
   const handleCopyClick = () => {
     copy('https://secure.doppus.com/pay/PZ0008MZ0008GZOHOBB');
     alert("Link copiado para a área de transferência!");
+    Axios.post("http://localhost:3001/compartilhar", {
+      idUsuario: test,
+    }).then((response) => {
+      alert(response.data.msg);
+    });
   }
-
 
   return (
     <div className="body-main-page">

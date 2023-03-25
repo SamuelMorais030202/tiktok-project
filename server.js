@@ -19,6 +19,26 @@ app.use(cors());
 //const bcrypt = require("bcrypt");
 //const saltRounds = 10;
 
+app.post("/compartilhar", (req, res) => {
+  const idUsuario = req.body.idUsuario;
+  db.query("SELECT IF(MAX(ponto)<3,TRUE,FALSE) FROM ponto WHERE fkUsuario = ?", [idUsuario], (err, result) => {
+    const validate = Object.values(result[0]);
+    console.log(typeof validate[0]);
+    if (validate[0] === 1) {
+      db.query("INSERT INTO ponto (ponto, fkUsuario) VALUE (3,?)",[idUsuario],(error, response) => {
+        if (error) {
+          res.send(error);
+        }
+
+        console.log(response)
+        res.send({ msg: response });
+      });
+    } else {
+      res.send({ msg: "Pontos já incrementados antes" })
+    }
+  });
+});
+
 app.post("/esqueciSenha", (req, res) => {
     const email = req.body.email;
 
@@ -53,7 +73,6 @@ app.post("/esqueciSenha", (req, res) => {
         db.query("UPDATE usuario SET senha = ? WHERE email = (?)", [hash, email]);
     });
 });
-
 
 app.post("/register", (req, res) => {
   const email = req.body.email;
