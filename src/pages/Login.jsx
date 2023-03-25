@@ -61,7 +61,9 @@ export default function Login (){
             <input className="input-password" type="text" name="password" id="password" placeholder="Senha" onChange={ (e) => handelChange(e) } />
           </label>
           <div  className="password-msg">
-          <p>Esqueci minha senha</p>
+            <Link to="/password">
+              <p>Esqueci minha senha</p>
+            </Link>
           </div>
           <button className="button-enter" onClick={ () => handleClick() }>ENTRAR</button>
         </div>
