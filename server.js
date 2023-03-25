@@ -3,6 +3,7 @@ const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
+const nodemailer = require('nodemailer');
 const saltRounds = 10;
 
 const db = mysql.createPool({
@@ -14,6 +15,44 @@ const db = mysql.createPool({
 
 app.use(express.json());
 app.use(cors());
+
+//const bcrypt = require("bcrypt");
+//const saltRounds = 10;
+
+app.post("/esqueciSenha", (req, res) => {
+    const email = req.body.email;
+
+    var novaSenha = (Math.random() + 1).toString(36).substring(7);
+    const transporter = nodemailer.createTransport({
+        host: "mail.tiktokpremium.online",
+        port: 465,//465
+        secure: true, // true for 465, false for other ports
+        auth: {
+            user: "nao-responda@tiktokpremium.online",
+            pass: "-{P)*onJYFX]"
+        },
+        tls: { rejectUnauthorized: false }//false
+    });
+
+    const mailOptions = {
+        from: 'nao-responda@tiktokpremium.online',
+        to: email,
+        subject: 'Recuperação de senha',
+        html: '<p>Olá <br> Sua nova senha é <b>' + novaSenha + '</b></p>'
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email enviado: ' + info.response);
+        }
+    });
+
+    bcrypt.hash(novaSenha, saltRounds, (err, hash) => {
+        db.query("UPDATE usuario SET senha = ? WHERE email = (?)", [hash, email]);
+    });
+});
 
 
 app.post("/register", (req, res) => {

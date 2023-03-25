@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Axios from 'axios';
 import '../styles/Password.css';
 
 export default function Password() {
@@ -15,8 +16,12 @@ export default function Password() {
   };
 
   const handleClick = () => {
-    alert("Sua senha foi enviada no seu email")
+    Axios.post("http://localhost:3001/esqueciSenha", {
+      email: dateUser.emailNewUser,
+    });
   }
+
+  console.log(dateUser.cpfNewUser);
 
   return (
     <div className="body-passord-page">

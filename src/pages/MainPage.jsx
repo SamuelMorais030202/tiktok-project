@@ -54,7 +54,7 @@ export default function MainPage() {
       <header className="header-main-page">
         <h4 className="name-main-page">
           Olá
-          {' '}
+          {'  '}
           {date.nome}
         </h4>
         <p className="pts-main-page">
