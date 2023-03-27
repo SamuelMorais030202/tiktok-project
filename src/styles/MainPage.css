@@ -97,42 +97,17 @@
   border-radius: 11px;
 }
 
-/* @media screen and (max-width: 599px) {
-  .header-main-page {
-    display: flex;
-    justify-content: space-between;
-    gap: 110px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    margin-top: 20px;
-    width: 300px;
-  }
-
+@media screen and (max-width: 599px) {
   .main-main-page {
     background-color: rgba(255, 255, 255, 0.726);
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    padding: 12px;
+    width: 370px;
+    padding: 5px;
     border: none;
     border-radius: 15px;
     box-shadow: 4px 2px 1px rgba(0, 0, 0, 0.507);
   }
-
-  .pts-user-main-page {
-    background-color: rgb(8, 34, 121);
-    border-radius: 12px;
-    height: 20px;
-  }
-  
-  .bara-main-page {
-    background-color: rgb(162, 162, 238);
-    border-radius: 12px;
-    width: 400px;
-    height: 20px;
-    margin-bottom: 20px;
-  }
-} */
+}

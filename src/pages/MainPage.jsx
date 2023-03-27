@@ -31,23 +31,27 @@ export default function MainPage() {
   }, [test, pts]);
 
   const handleClick = () => {
-    Axios.post("http://localhost:3001/ponto", {
-      idUsuario: test,
-    }).then((response) => {
-      if (response.data.msg === 'Total') {
-        alert("Você atingiu a pontuação máxia do dia");
-        history.push('/watchVieos');
-      }
-      if (response.data.msg === 'Ponto incrementado') {
-        history.push('/watchVieos');
-      }
-    });
-    Axios.post("http://localhost:3001/pontos", {
-      idUsuario: test,
-    }).then((response) => {
-      const pstInicial = Object.values(response.data[0])
-      setPts(pstInicial);
-    });
+    if (pts < 40) {
+      Axios.post("http://localhost:3001/ponto", {
+        idUsuario: test,
+      }).then((response) => {
+        if (response.data.msg === 'Total') {
+          alert("Você atingiu a pontuação máxia do dia");
+          history.push('/watchVieos');
+        }
+        if (response.data.msg === 'Ponto incrementado') {
+          history.push('/watchVieos');
+        }
+      });
+      Axios.post("http://localhost:3001/pontos", {
+        idUsuario: test,
+      }).then((response) => {
+        const pstInicial = Object.values(response.data[0])
+        setPts(pstInicial);
+      });
+    } else {
+      alert("parabéns você conclui a meta, troque seus pontos");
+    }
   }
 
   const handleCopyClick = () => {
@@ -62,7 +66,12 @@ export default function MainPage() {
 
   const handleHabilit = () => {
   if (pts * 7.5 === 300) {
-    history.push('/privete')
+    history.push('/privete');
+    Axios.post("http://localhost:3001/compartilhar", {
+      idUsuario: test,
+    });
+  } else {
+    alert('Você ainda não pode trocar seus pontos');
   }
   };
 

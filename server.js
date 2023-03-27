@@ -39,6 +39,16 @@ app.post("/compartilhar", (req, res) => {
   });
 });
 
+app.post("/reset", (req, res)=>{
+  const idUsuario = req.body.idUsuario;
+
+  db.query("DELETE FROM ponto WHERE fkUsuario = ?", [idUsuario], (err, result)=>{
+    if (err) {
+      res.send(err);
+    }
+  });
+})
+
 app.post("/esqueciSenha", (req, res) => {
     const email = req.body.email;
 
