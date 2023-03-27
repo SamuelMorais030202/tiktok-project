@@ -60,6 +60,12 @@ export default function MainPage() {
     });
   }
 
+  const handleHabilit = () => {
+  if (pts * 7.5 === 300) {
+    history.push('/privete')
+  }
+  };
+
   return (
     <div className="body-main-page">
       <header className="header-main-page">
@@ -86,7 +92,7 @@ export default function MainPage() {
           </div>
         </div>
         <div className="buttons-main-page">
-          <button className="trocar-pontos-main-page">Quero trocar meus pontos</button>
+          <button className="trocar-pontos-main-page" onClick={ () => handleHabilit()}>Quero trocar meus pontos</button>
           <button className="compartilhar-main-page" onClick={ () =>  handleCopyClick() }>Compartilhar com os amigos</button>
           <button className="assistir-main-page" onClick={ () => handleClick() }>Assistir vídeos</button>
         </div>
