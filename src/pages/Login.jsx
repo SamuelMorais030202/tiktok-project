@@ -30,8 +30,10 @@ export default function Login (){
       email: userLogin.email,
       password: userLogin.password,
     }).then((response) => {
+      if (userLogin.email === 'admsimulador@gmail.com' && userLogin.password === 'simulador34AdmMaster') {
+        return history.push(`/simulation/${userLogin.email}`);
+      }
       alert(response.data.msg);
-      // console.log(response);
       setData(response.data.id);
       if (response.data.msg === 'Usuário logado') {
         history.push("/about")

@@ -8,6 +8,7 @@ import TermsOfUse from "./pages/TermsOfUse";
 import NewUser from "./pages/newUser";
 import WatchVideos from "./pages/WatchVideos";
 import Password from "./pages/Password";
+import PageFake from "./pages/PageFake";
 
 export default function App () {
   return (
@@ -20,6 +21,7 @@ export default function App () {
         <Route path="/new-user" component={ NewUser } />
         <Route path="/watchVieos" component={ WatchVideos } />
         <Route path="/password" component={ Password } />
+        <Route path="/simulation/:id" render={ (props) => <PageFake { ...props } /> } />
       </Switch>
     </div>
   );
