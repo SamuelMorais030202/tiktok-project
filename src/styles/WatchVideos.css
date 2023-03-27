@@ -1,5 +1,5 @@
 .container-videos-main {
-    background-color: rgb(16, 65, 172, 0.842);
+    background-image: url('../images/backgroundImg.jpeg');
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -18,7 +18,7 @@
     align-items: center;
     max-width: 50vh;
     flex-direction: column;
-    height: 90vh;
+    height: 80vh;
     padding: 20px 40px;
     border-radius: 10px;
     box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
@@ -69,6 +69,7 @@ button {
     text-align: center;
     width: 50vh;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .imgNullFund {
