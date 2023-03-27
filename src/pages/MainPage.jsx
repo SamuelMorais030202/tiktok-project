@@ -60,6 +60,12 @@ export default function MainPage() {
     });
   }
 
+  const handleHabilit = () => {
+  if (pts * 7.5 === 300) {
+    history.push('/privete')
+  }
+  };
+
   return (
     <div className="body-main-page">
       <header className="header-main-page">
@@ -69,7 +75,7 @@ export default function MainPage() {
           {date.nome}
         </h4>
         <p className="pts-main-page">
-          { pts * 9.5 }
+          { pts * 7.5 }
           {' '}
           pts
         </p>
@@ -78,15 +84,15 @@ export default function MainPage() {
         <img src={ imageFundNull } alt="logo" className="imgNullFund" />
         <div className="container-main-page">
           <div className="description-main-page">
-            <p>{ pts * 9.5 } pts</p>
+            <p>{ pts * 7.5 } pts</p>
             <p className="meta-main-page">Meta de troca</p>
           </div>
           <div className="bara-main-page">
-            <div className="pts-user-main-page" style={ { width: `${pts * 9.5}px` } }></div>
+            <div className="pts-user-main-page" style={ { width: `${pts * 7.5}px` } }></div>
           </div>
         </div>
         <div className="buttons-main-page">
-          <button className="trocar-pontos-main-page">Quero trocar meus pontos</button>
+          <button className="trocar-pontos-main-page" onClick={ () => handleHabilit()}>Quero trocar meus pontos</button>
           <button className="compartilhar-main-page" onClick={ () =>  handleCopyClick() }>Compartilhar com os amigos</button>
           <button className="assistir-main-page" onClick={ () => handleClick() }>Assistir vídeos</button>
         </div>

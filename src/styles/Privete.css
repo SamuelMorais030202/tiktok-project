@@ -1,0 +1,123 @@
+.container-privete-main {
+    background-image: url('../images/backgroundImg.jpeg');
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.conteudo-privete-video {
+    background-color: rgba(248, 248, 248, 0.842);
+    display: flex;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 55vh;
+    flex-direction: column;
+    height: 80vh;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+}
+
+.header-privete {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-bottom: 30px;
+    width: 330px;
+}
+
+.name-privete {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.pts-privete {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.div-regras {
+  font-size: 14.2px;
+  font-weight: 70;
+  color: rgb(63, 29, 63);
+  width: 63vh;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 15px;
+}
+
+.imgPrevete {
+    width: 10vh;
+    margin-bottom: 23px;
+    margin-top: 20px;
+}
+
+.title-video-privete {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 36px;
+    color: #000000;
+}
+
+.text-instrution {
+    font-size: 16px;
+  font-weight: 70;
+  color: rgb(46, 44, 46);
+  width: 63vh;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 599px) {
+    .name-privete {
+        font-size: 14px;
+        color: rgb(251, 43, 91);
+    }
+    
+    .pts-privete {
+        font-size: 14px;
+        color: rgb(251, 43, 91);
+    }
+
+    .conteudo-privete-video {
+        background-color: rgba(248, 248, 248, 0.842);
+        display: flex;
+        color: rgb(255, 0, 0);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+        max-width: 43vh;
+        flex-direction: column;
+        height: 80vh;
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+    }
+
+    .text-instrution {
+        font-size: 16px;
+      font-weight: 70;
+      color: rgb(46, 44, 46);
+      width: 50vh;
+      margin-bottom: 5px;
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      margin-bottom: 15px;
+    }
+}
