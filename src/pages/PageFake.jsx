@@ -11,7 +11,9 @@ export default function PageFake(props) {
   const history = useHistory();
 
   const handleChangePoints = () => {
-    console.log('teste');
+    history.push(`/privete-simulation/${points}`);
+    localStorage.setItem('points', 0);
+    setPoints(0);
   }
 
   const handleCopyClick = () => {
@@ -27,15 +29,13 @@ export default function PageFake(props) {
   }, []);
 
   const handleClick = () => {
-    if (points === 40) {
-      history.push('/watchVieos');
-      localStorage.setItem('points', 0);
-      setPoints(0);
-    } else {
+    if (points < 40) {
       const sumePoints = points + 1
       setPoints(sumePoints);
       localStorage.setItem('points', sumePoints);
-      history.push('/watchVieos');
+      // history.push('/watchVieos');
+    } else {
+      alert("Você já pode trocar seus pontos")
     }
   }
 

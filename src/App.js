@@ -10,6 +10,7 @@ import WatchVideos from "./pages/WatchVideos";
 import Password from "./pages/Password";
 import PageFake from "./pages/PageFake";
 import Privete from "./pages/Privete";
+import PriveteFake from "./pages/PriveteFake";
 
 export default function App () {
   return (
@@ -24,6 +25,7 @@ export default function App () {
         <Route path="/password" component={ Password } />
         <Route path="/simulation/:id" render={ (props) => <PageFake { ...props } /> } />
         <Route path="/privete" component={ Privete } />
+        <Route path="/privete-simulation/:id" render={ (props) => <PriveteFake { ...props } /> } />
       </Switch>
     </div>
   );
