@@ -68,12 +68,12 @@ export default function Privete (){
             </div>
             <div className="classButton">
               <a href="https://www.tiktok.com/pt-BR" target="_blank" rel="noreferrer">
-              <button onClick={redirectToEmail} className="button-video">Abrir Email!</button>
+              <button onClick={redirectToEmail} className="button-email">Abrir Email!</button>
               </a>
                 <div className="alert-video-text">
                   <p className="name-user">Após receber seu prêmio continue Assistindo, e continue resgatando seus premios;</p>
                 </div>
-                <button onClick={ () => newGame() } className="button-video">Jogue Novamente</button>
+                <button onClick={ () => newGame() } className="button-play">Jogue Novamente</button>
             </div>
           </div>
         </div>
