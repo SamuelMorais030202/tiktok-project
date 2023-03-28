@@ -18,7 +18,7 @@ export default function PageFake(props) {
 
   const handleCopyClick = () => {
     copy('https://secure.doppus.com/pay/PZ0008MZ0008GZOHOBB');
-    alert("Link copiado para a área de transferência!");
+    alert("Link copiado com sucesso para adquirir mais pontos envie o link para seus amigos!");
   }
 
   useEffect(() => {
@@ -33,9 +33,7 @@ export default function PageFake(props) {
       const sumePoints = points + 1
       setPoints(sumePoints);
       localStorage.setItem('points', sumePoints);
-      // history.push('/watchVieos');
-    } else {
-      alert("Você já pode trocar seus pontos")
+      history.push('/watchVieos');
     }
   }
 
@@ -45,7 +43,7 @@ export default function PageFake(props) {
         <h4 className="name-main-page">
           Olá
           {'  '}
-          Administrador
+          Douglas
         </h4>
         <p className="pts-main-page">
           { points * 7.5 }

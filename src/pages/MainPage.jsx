@@ -36,7 +36,6 @@ export default function MainPage() {
         idUsuario: test,
       }).then((response) => {
         if (response.data.msg === 'Total') {
-          alert("Você atingiu a pontuação máxia do dia");
           history.push('/watchVieos');
         }
         if (response.data.msg === 'Ponto incrementado') {
@@ -50,18 +49,16 @@ export default function MainPage() {
         setPts(pstInicial);
       });
     } else {
-      alert("parabéns você conclui a meta, troque seus pontos");
+      history.push('/watchVieos');
     }
   }
 
   const handleCopyClick = () => {
     copy('https://secure.doppus.com/pay/PZ0008MZ0008GZOHOBB');
-    alert("Link copiado para a área de transferência!");
+    alert("Link copiado com sucesso para adquirir mais pontos envie o link para seus amigos!");
     Axios.post("http://localhost:3001/compartilhar", {
       idUsuario: test,
-    }).then((response) => {
-      alert(response.data.msg);
-    });
+    })
   }
 
   const handleHabilit = () => {

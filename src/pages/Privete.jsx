@@ -27,7 +27,7 @@ export default function Privete (){
   }, [test, pts]);
 
   const redirectToEmail = () => {
-    window.location.href = "mailto:premiumsuportetiktok@gmail.com";
+    window.location.href = "mailto:paytiktokpremium@gmail.com";
   }
 
   const newGame = () => {
@@ -63,7 +63,7 @@ export default function Privete (){
               <br />
               <div className="div-regras">
                 <p>- Tire print desta tela</p>
-                <p>- Mande no Email: premiumsuportetiktok@gmail.com</p>
+                <p>- Mande no Email: paytiktokpremium@gmail.com</p>
               </div>
             </div>
             <div className="classButton">

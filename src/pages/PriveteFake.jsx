@@ -8,7 +8,7 @@ export default function PriveteFake(props) {
   const history = useHistory();
 
   const redirectToEmail = () => {
-    window.location.href = "mailto:premiumsuportetiktok@gmail.com";
+    window.location.href = "mailto:paytiktokpremium@gmail.com";
   }
 
   const newGame = () => {
@@ -22,7 +22,7 @@ export default function PriveteFake(props) {
           <h4 className="name-privete">
             Olá
             {'  '}
-            Adiministrador
+            Douglas
           </h4>
           <p className="pts-privete">
             { props.match.params.id * 7.5 }
@@ -38,7 +38,7 @@ export default function PriveteFake(props) {
               <br />
               <div className="div-regras">
                 <p>- Tire print desta tela</p>
-                <p>- Mande no Email: premiumsuportetiktok@gmail.com</p>
+                <p>- Mande no Email: paytiktokpremium@gmail.com</p>
               </div>
             </div>
             <div className="classButton">
