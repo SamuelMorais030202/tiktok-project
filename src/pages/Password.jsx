@@ -21,8 +21,6 @@ export default function Password() {
     });
   }
 
-  console.log(dateUser.cpfNewUser);
-
   return (
     <div className="body-passord-page">
       <h1>Preencha os dados para recuperar sua senha!</h1>
@@ -30,7 +28,7 @@ export default function Password() {
         <label htmlFor="email">
           <input
             className="input-registray-email"
-            type="text"
+            type="email"
             value={dateUser.emailNewUser}
             name="emailNewUser"
             id="email"
@@ -50,7 +48,7 @@ export default function Password() {
           />
         </label>
 
-        <button onClick={ () => handleClick() }>Recuperar senha</button>
+        <button type='button' onClick={ () => handleClick() }>Recuperar senha</button>
       </div>
     </div>
   );

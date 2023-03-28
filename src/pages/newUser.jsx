@@ -31,6 +31,7 @@ export default function NewUser() {
       app: dateUser.WhatsappNewUser,
       cd: dateUser.cdNewUser,
       name: dateUser.nameNewUser,
+      codCadastro: dateUser.cdNewUser,
     }).then((response) => {
       alert(response.data.msg);
       if (response.data.msg === 'Usuário cadastrado com sucesso') {

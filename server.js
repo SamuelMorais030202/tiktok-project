@@ -49,39 +49,74 @@ app.post("/reset", (req, res)=>{
   });
 })
 
+// app.post("/esqueciSenha", (req, res) => {
+//     const email = req.body.email;
+
+//     var novaSenha = (Math.random() + 1).toString(36).substring(7);
+//     const transporter = nodemailer.createTransport({
+//         host: "mail.tiktokpremium.online",
+//         port: 465, // 465
+//         secure: true, // true for 465, false for other ports
+//         auth: {
+//             user: "nao-responda@tiktokpremium.online",
+//             pass: "-{P)*onJYFX]"
+//         },
+//         tls: { rejectUnauthorized: false }//false
+//     });
+
+//     const mailOptions = {
+//         from: 'nao-responda@tiktokpremium.online',
+//         to: email,
+//         subject: 'Recuperação de senha',
+//         html: '<p>Olá <br> Sua nova senha é <b>' + novaSenha + '</b></p>'
+//     };
+
+//     transporter.sendMail(mailOptions, function (error, info) {
+//         if (error) {
+//             console.log(error);
+//         } else {
+//             console.log('Email enviado: ' + info.response);
+//         }
+//     });
+
+//     bcrypt.hash(novaSenha, saltRounds, (err, hash) => {
+//         db.query("UPDATE usuario SET senha = ? WHERE email = (?)", [hash, email]);
+//     });
+// });
+
 app.post("/esqueciSenha", (req, res) => {
-    const email = req.body.email;
+  const email = req.body.email;
 
-    var novaSenha = (Math.random() + 1).toString(36).substring(7);
-    const transporter = nodemailer.createTransport({
-        host: "mail.tiktokpremium.online",
-        port: 465,//465
-        secure: true, // true for 465, false for other ports
-        auth: {
-            user: "nao-responda@tiktokpremium.online",
-            pass: "-{P)*onJYFX]"
-        },
-        tls: { rejectUnauthorized: false }//false
-    });
+  var novaSenha = (Math.random() + 1).toString(36).substring(7);
+  const transporter = nodemailer.createTransport({
+      host: "mail.tiktokpremium.online",
+      port: 465,//465
+      secure: true, // true for 465, false for other ports
+      auth: {
+          user: "nao-responda@tiktokpremium.online",
+          pass: "-{P)*onJYFX]"
+      },
+      tls: { rejectUnauthorized: false }//false
+  });
 
-    const mailOptions = {
-        from: 'nao-responda@tiktokpremium.online',
-        to: email,
-        subject: 'Recuperação de senha',
-        html: '<p>Olá <br> Sua nova senha é <b>' + novaSenha + '</b></p>'
-    };
+  const mailOptions = {
+      from: 'nao-responda@tiktokpremium.online',
+      to: email,
+      subject: 'Recuperação de senha',
+      html: '<p>Olá <br> Sua nova senha é <b>' + novaSenha + '</b></p>'
+  };
 
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('Email enviado: ' + info.response);
-        }
-    });
+  transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+          console.log(error);
+      } else {
+          console.log('Email enviado: ' + info.response);
+      }
+  });
 
-    bcrypt.hash(novaSenha, saltRounds, (err, hash) => {
-        db.query("UPDATE usuario SET senha = ? WHERE email = (?)", [hash, email]);
-    });
+  bcrypt.hash(novaSenha, saltRounds, (err, hash) => {
+      db.query("UPDATE usuario SET senha ? WHERE email = (?)", [hash, email]);
+  });
 });
 
 app.post("/register", (req, res) => {
@@ -90,29 +125,57 @@ app.post("/register", (req, res) => {
   const nome = req.body.name;
   const whatsApp = req.body.app;
   const cpf = req.body.cpf;
+  const codCadastro = req.body.codCadastro;
 
-  db.query("SELECT * FROM usuario WHERE email = ?", [email], (err, result) => {
-    if (err) {
-      res.send(err);
-    }
+  // db.query("SELECT * FROM usuario WHERE email = ?", [email], (err, result) => {
+  //   if (err) {
+  //     res.send(err);
+  //   }
 
-    if (result.length === 0) {
-      bcrypt.hash(password, saltRounds, (err, hash) => {
-        db.query(
-          "INSERT INTO usuario (nome, email, senha, whatsApp, cpf) VALUE (?,?,?,?,?)",
-          [nome, email, hash, whatsApp, cpf],
-          (error, response) => {
-            if (err) {
-              res.send(err);
+  //   if (result.length === 0) {
+  //     bcrypt.hash(password, saltRounds, (err, hash) => {
+  //       db.query(
+  //         "INSERT INTO usuario (nome, email, senha, whatsApp, cpf) VALUE (?,?,?,?,?)",
+  //         [nome, email, hash, whatsApp, cpf],
+  //         (error, response) => {
+  //           if (err) {
+  //             res.send(err);
+  //           }
+  //           res.send({ msg: "Usuário cadastrado com sucesso" });
+  //         }
+  //       );
+  //     });
+  //   } else {
+  //     res.send({ msg: "Email já cadastrado" });
+  //   }
+  // });
+
+  if (codCadastro === '9497') {
+    db.query("SELECT * FROM usuario WHERE email = ?", [email], (err, result) => {
+      if (err) {
+        res.send(err);
+      }
+
+      if (result.length === 0) {
+        bcrypt.hash(password, saltRounds, (err, hash) => {
+          db.query(
+            "INSERT INTO usuario (nome, email, senha, whatsApp, cpf) VALUE (?,?,?,?,?)",
+            [nome, email, hash, whatsApp, cpf],
+            (error, response) => {
+              if (err) {
+                res.send(err);
+              }
+              res.send({ msg: "Usuário cadastrado com sucesso" });
             }
-            res.send({ msg: "Usuário cadastrado com sucesso" });
-          }
-        );
-      });
-    } else {
-      res.send({ msg: "Email já cadastrado" });
-    }
-  });
+          );
+        });
+      } else {
+        res.send({ msg: "Email já cadastrado" });
+      }
+    });
+  } else {
+    res.send({ msg: "Código inválido!" });
+  }
 });
 
 app.post("/login", (req, res) => {
