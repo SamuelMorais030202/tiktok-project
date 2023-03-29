@@ -16,7 +16,7 @@ export default function Password() {
   };
 
   const handleClick = () => {
-    Axios.post("http://localhost:3001/esqueciSenha", {
+    Axios.post("http://localhost:3004/esqueciSenha", {
       email: dateUser.emailNewUser,
     });
   }
