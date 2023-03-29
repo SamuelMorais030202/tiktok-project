@@ -147,7 +147,7 @@
       width: 290px;
       flex-direction: column;
       height: 80vh;
-      padding: 10px 20px;
+      padding: 10px 23px;
       border-radius: 10px;
       box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
     }
@@ -157,6 +157,287 @@
         font-weight: 70;
         color: rgb(46, 44, 46);
         width: 300px;
+        padding: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin-bottom: 2px;
+    }
+      
+      .button-play {
+        width: 45vh;
+        height: 7vh;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(251, 43, 91);
+        border: none;
+        border-radius: 6px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+      }
+
+      .button-email {
+        width: 45vh;
+        height: 7vh;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(251, 43, 91);
+        border: none;
+        border-radius: 6px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+}
+
+@media screen and (max-width: 460px) {
+  .container-privete-main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/backgroundImg.jpeg');
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header-privete {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-bottom: -10px;
+  width: 300px;
+}
+
+    .name-privete {
+        font-size: 14px;
+        color: rgb(251, 43, 91);
+    }
+    
+    .pts-privete {
+        font-size: 14px;
+        color: rgb(251, 43, 91);
+    }
+
+    .conteudo-privete-video {
+      font-size: 14px;
+      background-color: rgba(248, 248, 248, 0.842);
+      display: flex;
+      color: rgb(255, 0, 0);
+      margin-top: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 320px;
+      flex-direction: column;
+      height: 80vh;
+      padding: 10px 32px;
+      border-radius: 10px;
+      box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+    }
+
+    .text-instrution {
+        font-size: 16px;
+        font-weight: 70;
+        color: rgb(46, 44, 46);
+        width: 300px;
+        padding: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin-bottom: 2px;
+    }
+      
+      .button-play {
+        width: 40vh;
+        height: 7vh;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(251, 43, 91);
+        border: none;
+        border-radius: 6px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+      }
+
+      .button-email {
+        width: 40vh;
+        height: 7vh;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(251, 43, 91);
+        border: none;
+        border-radius: 6px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+}
+
+@media screen and (max-width: 399px) {
+  .container-privete-main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/backgroundImg.jpeg');
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.div-regras {
+  width: 310px;
+  font-size: 13px;
+}
+
+.header-privete {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-top: 14px;
+  margin-bottom: -8px;
+  width: 300px;
+}
+
+    .name-privete {
+        font-size: 14px;
+        color: rgb(251, 43, 91);
+    }
+    
+    .pts-privete {
+        font-size: 14px;
+        color: rgb(251, 43, 91);
+    }
+
+    .conteudo-privete-video {
+      font-size: 14px;
+      background-color: rgba(248, 248, 248, 0.842);
+      display: flex;
+      color: rgb(255, 0, 0);
+      margin-top: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 290px;
+      flex-direction: column;
+      height: 83vh;
+      padding: 13px 28px;
+      border-radius: 10px;
+      box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+    }
+
+    .text-instrution {
+        font-size: 16px;
+        font-weight: 70;
+        color: rgb(46, 44, 46);
+        width: 300px;
+        padding: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin-bottom: 2px;
+    }
+      
+      .button-play {
+        width: 30vh;
+        height: 7vh;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(251, 43, 91);
+        border: none;
+        border-radius: 6px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+      }
+
+      .button-email {
+        width: 30vh;
+        height: 7vh;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(251, 43, 91);
+        border: none;
+        border-radius: 6px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+}
+
+@media screen and (max-width: 350px) {
+  .container-privete-main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/backgroundImg.jpeg');
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: scroll; */
+}
+
+.div-regras {
+  width: 280px;
+}
+
+.header-privete {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-top: 100px;
+  margin-bottom: 3px;
+  width: 250px;
+}
+
+    .name-privete {
+        font-size: 14px;
+        color: rgb(251, 43, 91);
+    }
+    
+    .pts-privete {
+        font-size: 14px;
+        color: rgb(251, 43, 91);
+    }
+
+    .conteudo-privete-video {
+      font-size: 14px;
+      background-color: rgba(248, 248, 248, 0.842);
+      display: flex;
+      color: rgb(255, 0, 0);
+      margin-top: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 380px;
+      flex-direction: column;
+      height: 93vh;
+      padding: 18px 30px;
+      border-radius: 10px;
+      box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      margin-top: 30px;
+    }
+
+    .text-instrution {
+        font-size: 16px;
+        font-weight: 70;
+        color: rgb(46, 44, 46);
+        width: 220px;
         padding: 5px;
         margin-bottom: 5px;
         display: flex;

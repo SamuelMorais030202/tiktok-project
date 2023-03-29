@@ -156,5 +156,6 @@
   max-width: 500px;
   padding: 10px 40px;
   border-radius: 10px;
+  overflow: hidden;
 }
 }

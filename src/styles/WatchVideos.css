@@ -87,12 +87,13 @@ button {
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;
-    max-width: 40vh;
+    max-width: 35vh;
     flex-direction: column;
-    height: 88vh;
-    padding: 20px 40px;
+    height: 80vh;
+    padding: 20px 45px;
     border-radius: 10px;
     box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+    overflow: hidden;
   }
 
   .text-cell {
@@ -110,6 +111,91 @@ button {
     border-radius: 6px;
     margin-top: 20px;
     margin-bottom: 50px;
+}
+  
+}
+
+@media screen and (max-width: 500px) {
+  .conteudo-video {
+    background-color: rgba(248, 248, 248, 0.842);
+    display: flex;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 38vh;
+    flex-direction: column;
+    height: 80vh;
+    padding: 20px 45px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+    overflow: hidden;
+    font-size: 14px;
+  }
+
+  .text-cell {
+    width: 43vh;
+    font-size: 14px;
+    margin-left: 17px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .button-video {
+    width: 40vh;
+    height: 7vh;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(251, 43, 91);
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+  
+}
+
+@media screen and (max-width: 399px) {
+  .conteudo-video {
+    background-color: rgba(248, 248, 248, 0.842);
+    display: flex;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 35vh;
+    flex-direction: column;
+    height: 90vh;
+    padding: 28px 50px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+    overflow: hidden;
+    font-size: 16px;
+  }
+
+  .text-cell {
+    width: 42vh;
+    margin-left: 17px;
+    margin: auto;
+  }
+
+  .button-video {
+    width: 45vh;
+    height: 7vh;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(251, 43, 91);
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.name-user {
+  width: 200px;
+  margin: auto;
 }
   
 }
