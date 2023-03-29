@@ -13,6 +13,8 @@ export default function NewUser() {
     passwordNewUser: '',
   });
 
+  const [check, setCheck] = useState(false);
+
   const history = useHistory();
 
   const handelChange = ({ target }) => {
@@ -22,24 +24,37 @@ export default function NewUser() {
     })
   };
 
+  const handleCheck = () => {
+    if (check) {
+      setCheck(false)
+    } else {
+      setCheck(true);
+    }
+  }
+
   const handleClick = () => {
 
-    Axios.post("http://localhost:3004/register", {
-      email: dateUser.emailNewUser,
-      password: dateUser.passwordNewUser,
-      cpf: dateUser.cpfNewUser,
-      app: dateUser.WhatsappNewUser,
-      cd: dateUser.cdNewUser,
-      name: dateUser.nameNewUser,
-      codCadastro: dateUser.cdNewUser,
-    }).then((response) => {
-      alert(response.data.msg);
-      if (response.data.msg === 'Usuário cadastrado com sucesso') {
-        history.push('/');
-      } else if (response.data.msg === 'Email já cadastrado') {
-        history.push('/new-user');
-      }
-    });
+    if (check) {
+      Axios.post("http://localhost:3004/register", {
+        email: dateUser.emailNewUser,
+        password: dateUser.passwordNewUser,
+        cpf: dateUser.cpfNewUser,
+        app: dateUser.WhatsappNewUser,
+        cd: dateUser.cdNewUser,
+        name: dateUser.nameNewUser,
+        codCadastro: dateUser.cdNewUser,
+      }).then((response) => {
+        alert(response.data.msg);
+        if (response.data.msg === 'Usuário cadastrado com sucesso') {
+          history.push('/');
+        } else if (response.data.msg === 'Email já cadastrado') {
+          history.push('/new-user');
+        }
+      });
+    } else {
+      alert("É preciso concordar com as políticas de privacidade")
+    }
+
 
   }
 
@@ -126,7 +141,7 @@ export default function NewUser() {
           />
         </label>
         <label className="input-terms">
-          <input type="checkbox" name="concorda" id="id-terms" />
+          <input type="checkbox" name="concorda" id="id-terms" value={ check } onChange={ () => handleCheck() } />
           Eu li e concordo com as Políticas de Privacidade e os Termos de Uso.
         </label>
         <div className="text-container">

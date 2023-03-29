@@ -188,7 +188,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .inputs {
@@ -199,8 +200,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 51vh;
-            min-height: 90vh;
+            width: 50vh;
+            min-height: 85vh;
         }
 
         .div-filho {
@@ -217,20 +218,20 @@
 
         .title-h1 {
             border-top: 20px;
-            font-size: 21px;
+            font-size: 20px;
             margin-bottom: 15px;
           }
 
           .msg-title {
             color: rgb(255, 0, 0);
-            width: 9000px;
+            width: 900px;
             font-size:11px;
             align-items: center;
             margin-bottom: 4px;
         }
 
         .input-registray-name{
-            width: 45vh;
+            width: 40vh;
             height: 5vh;
             border-radius: 6px;
             margin-bottom: 6px;
@@ -238,10 +239,11 @@
             border-width: 1px;
             border-color: rgb(145, 145, 145);
             background: none;
+            padding-left: 5px;
         }
 
         .input-registray-email {
-            width: 45vh;
+            width: 40vh;
             height: 5vh;
             border-radius: 6px;
             margin-bottom: 6px;
@@ -249,10 +251,11 @@
             border-width: 1px;
             border-color: rgb(145, 145, 145);
             background: none;
+            padding-left: 5px;
         }
     
         .input-registray-cpf {
-            width: 45vh;
+            width: 40vh;
             height: 5vh;
             border-radius: 6px;
             margin-bottom: 6px;
@@ -260,10 +263,11 @@
             border-width: 1px;
             border-color: rgb(145, 145, 145);
             background: none;
+            padding-left: 5px;
         }
     
         .input-whats {
-            width: 45vh;
+            width: 40vh;
             height: 5vh;
             border-radius: 6px;
             margin-bottom: 6px;
@@ -271,10 +275,11 @@
             border-width: 1px;
             border-color: rgb(145, 145, 145);
             background: none;
+            padding-left: 5px;
         }
 
         .codigo-valid {
-            width: 45vh;
+            width: 40vh;
             height: 5vh;
             border-radius: 6px;
             margin-bottom: 6px;
@@ -282,10 +287,11 @@
             border-width: 1px;
             border-color: rgb(145, 145, 145);
             background: none;
+            padding-left: 5px;
         }
     
         .senha {
-            width: 45vh;
+            width: 40vh;
             height: 5vh;
             border-radius: 6px;
             margin-bottom: 6px;
@@ -293,13 +299,15 @@
             border-width: 1px;
             border-color: rgb(145, 145, 145);
             background: none;
+            padding-left: 5px;
         }
 
         .input-terms {
-            width: 48vh;
+            width: 40vh;
             height: 4vh;
             margin-top: 6px;
             font-size: 12px;
+            padding: 5px;
         }
 
         .alert-text {
@@ -311,7 +319,314 @@
           }
 
           .button-cadastrar {
+            width: 42vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border: none;
+            background: rgb(251, 43, 91);
+            color: white;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+
+        .div-pai {
+            background-color: rgb(16, 65, 172);
+            color: rgb(0, 0, 0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .inputs {
+            background-color: rgb(249, 249, 249);
+            margin-top: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             width: 45vh;
+            min-height: 85vh;
+        }
+
+        .div-filho {
+            background-color: rgba(16, 65, 172, 0.842);
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+            max-width: 400px;
+            height: 100vh;
+            padding: 10px 40px;
+            border-radius: 10px;
+        }
+
+        .title-h1 {
+            border-top: 20px;
+            font-size: 20px;
+            margin-bottom: 15px;
+          }
+
+          .msg-title {
+            color: rgb(255, 0, 0);
+            width: 900px;
+            font-size:11px;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .input-registray-name{
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+
+        .input-registray-email {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+    
+        .input-registray-cpf {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+    
+        .input-whats {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+
+        .codigo-valid {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+    
+        .senha {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+
+        .input-terms {
+            width: 40vh;
+            height: 4vh;
+            margin-top: 6px;
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        .alert-text {
+            font-size: 11px;
+            text-align: center;
+            font-size:11px;
+            align-items: center;
+            margin-bottom: 4px;
+          }
+
+          .button-cadastrar {
+            width: 42vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border: none;
+            background: rgb(251, 43, 91);
+            color: white;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+
+        .div-pai {
+            background-color: rgb(16, 65, 172);
+            color: rgb(0, 0, 0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .inputs {
+            background-color: rgb(249, 249, 249);
+            margin-top: 5px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 54vh;
+            min-height: 83vh;
+        }
+
+        .div-filho {
+            background-color: rgba(16, 65, 172, 0.842);
+            display: block;
+            margin-top: 14px;
+            margin-bottom: 18px;
+            justify-content: center;
+            max-width: 400px;
+            height: 100vh;
+            padding: 30px 50px;
+            border-radius: 10px;
+        }
+
+        .title-h1 {
+            border-top: 20px;
+            font-size: 18px;
+            padding: 5px;
+            margin-bottom: 15px;
+          }
+
+          .msg-title {
+            color: rgb(255, 0, 0);
+            width: 900px;
+            font-size:11px;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .input-registray-name{
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+
+        .input-registray-email {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+    
+        .input-registray-cpf {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+    
+        .input-whats {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+
+        .codigo-valid {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+    
+        .senha {
+            width: 40vh;
+            height: 5vh;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(145, 145, 145);
+            background: none;
+            padding-left: 5px;
+        }
+
+        .input-terms {
+            width: 40vh;
+            height: 4vh;
+            margin-top: 6px;
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        .alert-text {
+            font-size: 11px;
+            text-align: center;
+            font-size:11px;
+            align-items: center;
+            margin-bottom: 4px;
+          }
+
+          .button-cadastrar {
+            width: 42vh;
             height: 5vh;
             border-radius: 6px;
             margin-bottom: 6px;
