@@ -18,14 +18,14 @@
     background-color: rgba(248, 248, 248, 0.842);
     display: flex;
     color: rgb(255, 0, 0);
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
     justify-content: center;
     align-items: center;
     max-width: 50vh;
     flex-direction: column;
     height: 83vh;
-    padding: 18px 80px;
+    padding: 12px 80px;
     border-radius: 10px;
     box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
 }
@@ -37,24 +37,24 @@
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    margin-bottom: 0px;
+    margin-bottom: -10px;
     width: 335px;
 }
 
 .name-privete {
-    font-size: 16spx;
+    font-size: 14px;
     color: rgb(255, 255, 255);
     margin-bottom: 20px;
 }
 
 .pts-privete {
-    font-size: 16px;
+    font-size: 14px;
     color: rgb(255, 255, 255);
 }
 
 .div-regras {
   font-size: 14.2px;
-  font-weight: 70;
+  font-weight: 500;
   color: rgb(63, 29, 63);
   width: 320px;
   margin-bottom: 5px;
@@ -65,20 +65,20 @@
 }
 
 .imgPrevete {
-    width: 10vh;
-    margin-bottom: 14px;
+    width: 8vh;
+    margin-bottom: 10px;
     margin-top: 5px;
 }
 
 .title-video-privete {
-    margin-bottom: 5px;
-    font-weight: 700;
-    font-size: 46px;
+    margin-bottom: -5px;
+    font-weight: 600;
+    font-size: 36px;
     color: #000000;
 }
 
 .text-instrution {
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 70;
     color: rgb(46, 44, 46);
     width: 63vh;
@@ -113,19 +113,20 @@
     }
 
     .conteudo-privete-video {
-        background-color: rgba(248, 248, 248, 0.842);
-        display: flex;
-        color: rgb(255, 0, 0);
-        margin-top: 10px;
-        margin-bottom: 20px;
-        justify-content: center;
-        align-items: center;
-        width: 280px;
-        flex-direction: column;
-        height: 80vh;
-        padding: 20px 40px;
-        border-radius: 10px;
-        box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+      font-size: 14px;
+      background-color: rgba(248, 248, 248, 0.842);
+      display: flex;
+      color: rgb(255, 0, 0);
+      margin-top: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 290px;
+      flex-direction: column;
+      height: 80vh;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
     }
 
     .text-instrution {
@@ -133,6 +134,7 @@
         font-weight: 70;
         color: rgb(46, 44, 46);
         width: 300px;
+        padding: 5px;
         margin-bottom: 5px;
         display: flex;
         flex-direction: column;
@@ -148,7 +150,7 @@
         background-color: rgb(251, 43, 91);
         border: none;
         border-radius: 6px;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 50px;
       }
 
