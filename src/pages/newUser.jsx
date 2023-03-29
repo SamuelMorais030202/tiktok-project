@@ -24,7 +24,7 @@ export default function NewUser() {
 
   const handleClick = () => {
 
-    Axios.post("http://localhost:3001/register", {
+    Axios.post("http://localhost:3004/register", {
       email: dateUser.emailNewUser,
       password: dateUser.passwordNewUser,
       cpf: dateUser.cpfNewUser,
@@ -37,7 +37,7 @@ export default function NewUser() {
       if (response.data.msg === 'Usuário cadastrado com sucesso') {
         history.push('/');
       } else if (response.data.msg === 'Email já cadastrado') {
-        history.push('/');
+        history.push('/new-user');
       }
     });
 

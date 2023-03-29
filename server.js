@@ -92,7 +92,7 @@ app.post("/esqueciSenha", (req, res) => {
   const db = mysql.createPool({
     host: "162.241.2.41",
     user: "tiflat68_tiktok",
-    password: "¨vewie_eklewlwel",
+    password: ",~h(7;^.!I5P",
     database: "tiflat68_tiktok",
   });
 
@@ -110,10 +110,10 @@ app.post("/esqueciSenha", (req, res) => {
   });
 
   const mailOptions = {
-      from: 'nao-responda1@tiktokpremium.online',
-      to: email,
-      subject: 'Recuperação de senha',
-      html: '<p>Olá <br> Sua nova senha é <b>' + novaSenha + '</b></p>'
+    from: 'nao-responda1@tiktokpremium.online',
+    to: email,
+    subject: 'Recuperação de senha',
+    html: '<p>Olá <br> Sua nova senha é <b>' + novaSenha + '</b></p>'
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
@@ -125,8 +125,8 @@ app.post("/esqueciSenha", (req, res) => {
   });
 
   bcrypt.hash(novaSenha, saltRounds, (err, hash) => {
-      db.query("UPDATE usuario SET senha ? WHERE email = (?)", [hash, email]);
-  });
+    db.query("UPDATE usuario SET senha = ? WHERE email = ?", [hash, email]);
+});
 });
 
 app.post("/register", (req, res) => {

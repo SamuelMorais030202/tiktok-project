@@ -17,12 +17,12 @@ export default function MainPage() {
   const history = useHistory();
 
   useEffect(()  => {
-    Axios.post("http://localhost:3001/updates", {
+    Axios.post("http://localhost:3004/updates", {
       idUsuario: test,
     }).then((response) => {
       setDate(response.data[0]);
     });
-    Axios.post("http://localhost:3001/pontos", {
+    Axios.post("http://localhost:3004/pontos", {
       idUsuario: test,
     }).then((response) => {
       const pstInicial = Object.values(response.data[0]);
@@ -32,7 +32,7 @@ export default function MainPage() {
 
   const handleClick = () => {
     if (pts < 40) {
-      Axios.post("http://localhost:3001/ponto", {
+      Axios.post("http://localhost:3004/ponto", {
         idUsuario: test,
       }).then((response) => {
         if (response.data.msg === 'Total') {
@@ -42,7 +42,7 @@ export default function MainPage() {
           history.push('/watchVieos');
         }
       });
-      Axios.post("http://localhost:3001/pontos", {
+      Axios.post("http://localhost:3004/pontos", {
         idUsuario: test,
       }).then((response) => {
         const pstInicial = Object.values(response.data[0])
@@ -64,7 +64,7 @@ export default function MainPage() {
   const handleHabilit = () => {
   if (pts * 7.5 === 300) {
     history.push('/privete');
-    Axios.post("http://localhost:3001/compartilhar", {
+    Axios.post("http://localhost:3004/compartilhar", {
       idUsuario: test,
     });
   } else {

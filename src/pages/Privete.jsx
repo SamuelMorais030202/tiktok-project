@@ -13,12 +13,12 @@ export default function Privete (){
 
   const test = localStorage.getItem('app');
   useEffect(()  => {
-    Axios.post("http://localhost:3001/updates", {
+    Axios.post("http://localhost:3004/updates", {
       idUsuario: test,
     }).then((response) => {
         setDate(response.data[0]);
       });
-    Axios.post("http://localhost:3001/pontos", {
+    Axios.post("http://localhost:3004/pontos", {
       idUsuario: test,
     }).then((response) => {
         const pstInicial = Object.values(response.data[0]);
@@ -31,7 +31,7 @@ export default function Privete (){
   }
 
   const newGame = () => {
-    Axios.post("http://localhost:3001/reset", {
+    Axios.post("http://localhost:3004/reset", {
       idUsuario: test,
     });
     history.push('/about');
