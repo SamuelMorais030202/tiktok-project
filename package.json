@@ -23,9 +23,12 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://SamuelMorais030202.github.io/tiktok-premiun",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-page -d build",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon ./server.js", 
+    "server": "nodemon ./server.js",
     "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "nodemon": "^2.0.22"
   }
 }
