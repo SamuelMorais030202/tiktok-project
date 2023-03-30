@@ -24,7 +24,6 @@
     "web-vitals": "^2.1.4"
   },
 
-  "homepage": "https://github.com/Pedrogarcia011/tiktok-project",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-page -d build",
