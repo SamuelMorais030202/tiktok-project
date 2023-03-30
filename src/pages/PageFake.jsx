@@ -11,9 +11,13 @@ export default function PageFake(props) {
   const history = useHistory();
 
   const handleChangePoints = () => {
-    history.push(`/privete-simulation/${points}`);
-    localStorage.setItem('points', 0);
-    setPoints(0);
+    if (points === 40) {
+      history.push(`/privete-simulation/${points}`);
+      localStorage.setItem('points', 0);
+      setPoints(0);
+    } else {
+      alert('Você ainda não pode trocar seus pontos');
+    }
   }
 
   const handleCopyClick = () => {
