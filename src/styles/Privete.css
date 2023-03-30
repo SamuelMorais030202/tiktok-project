@@ -470,3 +470,130 @@
         margin-bottom: 50px;
       }
 }
+
+@media screen and (min-width: 350px) and (max-width: 405px) {
+  .conteudo-privete-video {
+    background-color: rgba(248, 248, 248, 0.842);
+    display: flex;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    max-width: 30vh;
+    flex-direction: column;
+    height: 83vh;
+    padding: 12px 80px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+}
+
+.name-privete {
+  font-size: 14px;
+  color: rgb(251, 43, 91);
+  margin-top: 20px;
+}
+
+.pts-privete {
+  font-size: 14px;
+  color: rgb(251, 43, 91);
+  margin-top: 20px;
+}
+
+.text-instrution {
+  font-size: 17px;
+  font-weight: 70;
+  color: rgb(46, 44, 46);
+  width: 42vh;
+  margin-bottom: 3px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.button-play {
+  width: 45vh;
+  height: 7vh;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(251, 43, 91);
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.button-email {
+  width: 45vh;
+  height: 7vh;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(251, 43, 91);
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.name-user {
+  width: 40vh;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+}
+
+@media screen and (min-width: 460px) and (max-width: 599px) {
+  .conteudo-privete-video {
+    background-color: rgba(248, 248, 248, 0.842);
+    display: flex;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    max-width: 30vh;
+    flex-direction: column;
+    height: 83vh;
+    padding: 12px 80px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+}
+
+.name-user {
+  width: 47vh;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1800px) {
+  .name-privete {
+    font-size: 14px;
+    color: rgb(251, 43, 91);
+    margin-top: 20px;
+  }
+  
+  .pts-privete {
+    font-size: 14px;
+    color: rgb(251, 43, 91);
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 350px) {
+  .conteudo-privete-video {
+    background-color: rgba(248, 248, 248, 0.842);
+    display: flex;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    max-width: 18vh;
+    flex-direction: column;
+    height: 87vh;
+    padding: 12px 80px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 6px  rgba(16, 65, 172, 0.856) ;
+}
+}
