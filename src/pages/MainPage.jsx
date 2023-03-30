@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import UserDataContext from "../context/UserDataContext";
 import { useHistory } from "react-router-dom";
 import copy from 'clipboard-copy'; // Importando clipboard-copy
 
@@ -8,8 +7,6 @@ import '../styles/MainPage.css';
 import imageFundNull from '../images/logoSemFundo.png';
 
 export default function MainPage() {
-  const context = useContext(UserDataContext);
-  console.log(context);
   const [date, setDate] = useState({});
   const [pts, setPts] = useState(0);
 
